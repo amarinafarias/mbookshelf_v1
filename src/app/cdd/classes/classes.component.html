@@ -1,1 +1,34 @@
-<p>Classes Componente!</p>
+<table mat-table [dataSource]="livrosGenero" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Id do Gênero -->
+  <ng-container matColumnDef="_idGenero">
+    <th mat-header-cell *matHeaderCellDef> Código CDD </th>
+    <td mat-cell *matCellDef="let generos"> {{ generos._idGenero }} </td>
+  </ng-container>
+
+  <!-- Nome Gênero -->
+  <ng-container matColumnDef="nomeGenero">
+    <th mat-header-cell *matHeaderCellDef> Nome do Gênero</th>
+    <td mat-cell *matCellDef="let generos"> {{ generos.nomeGenero }} </td> ;<!--varíavel criada para adicionar no DataSource-->
+  </ng-container>
+
+  <!-- Decimal Gênero -->
+  <ng-container matColumnDef="decimalGenero">
+    <th mat-header-cell *matHeaderCellDef> Fator Decimal </th>
+    <td mat-cell *matCellDef="let generos"> {{ generos.decimalGenero }} </td>
+  </ng-container>
+
+  <!-- Symbol Column====EXEMPLO QUE VEIO DO ANGULAR=====POSSO APAGAR POSTERIORMENTE
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>-->
+
+  <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: visaoColunas;"></tr>
+</table>
+
+

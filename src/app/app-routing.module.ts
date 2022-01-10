@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-  {path:'', pathMatch:'full', redirectTo:'cdd'},
+  {path:'', pathMatch:'full', redirectTo:'cdd'}, //comando comum pra fazer guarda
   {
     path: 'cdd',
-    loadChildren: () => import('./cdd/cdd-routing.module').then(m => m.CddRoutingModule)
+    loadChildren: () => import('./cdd/cdd.module').then(m => m.CddModule)
   }
 ];
 

@@ -1,5 +1,7 @@
+import { GenerosService } from './../service/generos.service';
 import { Generos } from './../modelos/generos';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-classes',
@@ -8,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassesComponent implements OnInit {
 
-  livrosGenero: Generos[]=[];
-  visaoColunas=['_idGenero', 'nomeGenero', 'decimalGenero']
+  livrosGeneros: Observable <Generos[]>;
+  visaoColunas=['_idGenero', 'nomeGenero', 'decimalGenero'];
+  
+  constructor (private generosService: GenerosService){
+    this.livrosGeneros = generosService.listagemGeneros();
+  }
 
   ngOnInit(): void {
   }

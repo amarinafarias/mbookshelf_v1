@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay } from 'rxjs';
+import { delay, first, tap } from 'rxjs';
 
 import { Generos } from './../modelos/generos';
 
@@ -15,8 +15,10 @@ export class GenerosService {
 
   listagemGeneros() { //metodo
     return this.clienteDados.get<Generos[]>(this.urlAPI)// o construtor é cliente dados, mas onde está clientedados? Este clientedados eu contrui injetando nele o httpClient, a base para vc trazer o httpClient está no urlAPI
-    .pipe(                               
-      delay(3000)
+    .pipe(
+      delay(5000),
+      first(),
+      tap(apiGeneros => console.log(apiGeneros))
     )
 
   }

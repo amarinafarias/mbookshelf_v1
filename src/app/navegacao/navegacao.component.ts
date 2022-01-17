@@ -20,9 +20,8 @@ export class NavegacaoComponent {
   aIcone='80';
   //Controle das rotas do menu.
   itensMenu = [
-    {linkMenu:'/cdd', labelMenu:'Classes Deway', hab:false},
-    {linkMenu:'/feed', labelMenu:'Feed de Notícias', hab:false},
-    {linkMenu:'/feed', labelMenu:'Feed de Notícias', hab:false},
+    {linkMenu:'/cdd', labelMenu:'Classes Deway', hab:true},
+    {linkMenu:'/feed', labelMenu:'Feed de Notícias', hab:true},
     {linkMenu:'/clube', labelMenu:'Página Usuário', hab:false},
     {linkMenu:'/leitura', labelMenu:'Clubes de Leitura', hab:false}, //o item existe, mas por hab:false, não dá pra logar.
     {linkMenu:'/estante', labelMenu:'Estante Particular', hab:false},

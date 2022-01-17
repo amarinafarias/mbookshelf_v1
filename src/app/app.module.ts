@@ -7,10 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-compartilhado/app-material/app-material.module';
+import { NavegacaoComponent } from './navegacao/navegacao.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavegacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +26,13 @@ import { AppMaterialModule } from './app-compartilhado/app-material/app-material
     BrowserAnimationsModule,
     /*MatToolbarModule, professor excluiu daqui e disse que depois veremos se é aqui ou no app-material.module(pegadinha) */
     HttpClientModule,
-    AppMaterialModule
+    AppMaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
  ],
   providers: [],
   bootstrap: [AppComponent]

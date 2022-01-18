@@ -13,10 +13,10 @@ export class GenerosService {
 
   constructor(private clienteDados: HttpClient) { }
 
-  listagemGeneros() { //metodo
+  listagemGeneros() { //metodo (sempre o mét)
     return this.clienteDados.get<Generos[]>(this.urlAPI)// o construtor é cliente dados, mas onde está clientedados? Este clientedados eu contrui injetando nele o httpClient, a base para vc trazer o httpClient está no urlAPI
     .pipe(
-      delay(5000),
+      delay(3000),
       first(),
       tap(apiGeneros => console.log(apiGeneros))
     )

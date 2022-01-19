@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "mbookshelf_v1:build:production",
+            "firebaseProject": "bookshelfv2-57731",
+            "firebaseHostingSite": "bookshelfv2-57731"
+          }
         }
       }
     }

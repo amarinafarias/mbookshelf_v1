@@ -70,4 +70,4 @@ import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }//Não é boa prática exportar neste módulo que é o principal.

@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -19,7 +20,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatGridListModule,
 ]
 })
 export class AppMaterialModule { }

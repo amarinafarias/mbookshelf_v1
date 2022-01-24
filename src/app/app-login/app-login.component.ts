@@ -21,6 +21,7 @@ export class AppLoginComponent {
     private loginBuilder: FormBuilder,
     private toast: HotToastService,
     @Inject(MAT_DIALOG_DATA ) public conteudo:string,
+    private rotas: Router,
     private autenticacaoFirebaseService:AutenticacaoFirebaseService
     ) {}
 
@@ -31,7 +32,7 @@ export class AppLoginComponent {
     get senha(){
       return this.formularioLogin.get('senha')
     }
-    
+
     loginFirebase(){
       if(!this.formularioLogin.valid){
         return;
